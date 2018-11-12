@@ -1,6 +1,15 @@
 [user]
-	email = joshua.kwan@liveramp.com
 	name = Joshua Kwan
+	email = joshua.kwan@liveramp.com
+	signingkey = 9F00EDB05FED4CE8
+[alias]
+	co = checkout
+[push]
+	default = simple
+[hub]
+	host = git.liveramp.net
+[core]
+	excludesfile = ~/.gitignore
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

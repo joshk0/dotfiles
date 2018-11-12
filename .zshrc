@@ -88,4 +88,5 @@ export LIVERAMP_CODE_DIR=$HOME/src
 export GOPATH=$HOME/go
 
 alias ls='ls --color'
-export PS1='$(kube_ps1)'$PS1
+export PS1='$(kube_ps1)'"
+"$PS1

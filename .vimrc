@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set ts=2 sw=2 et ai
 set hlsearch
 set ruler
@@ -16,3 +18,4 @@ imap <F7> <C-O>\tp
 set pastetoggle=<F7>
 
 set viminfo='100,h
+set clipboard=unnamed

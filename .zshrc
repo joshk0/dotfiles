@@ -66,6 +66,7 @@ plugins=(
   fzf
   git
   gpg-agent
+  kubectl
   kube-ps1
 )
 
@@ -74,7 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export EMAIL=joshk@triplehelix.org
 export DEBEMAIL=$EMAIL
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$HOME/code/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:$GOPATH/bin:$HOME/src/bin:/usr/local/go/bin:$HOME/platform-tools"
+export PATH="$HOME/bin:$HOME/.fzf/bin:/usr/local/opt/coreutils/libexec/gnubin:$HOME/code/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:$GOPATH/bin:$HOME/src/bin:/usr/local/go/bin:$HOME/platform-tools"
 export P4CONFIG=.p4config
 export CVS_RSH=ssh
 export BROWSER=w3m
@@ -88,5 +89,5 @@ export LIVERAMP_CODE_DIR=$HOME/src
 export GOPATH=$HOME/go
 
 alias ls='ls --color'
-export PS1='$(kube_ps1)'"
+export PS1='$(kube_ps1)%(1j. {%j}.)'"
 "$PS1

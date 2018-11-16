@@ -17,3 +17,5 @@
 	required = true
 [branch]
 	autosetuprebase = always
+[commit]
+  gpgSign = yes

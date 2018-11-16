@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+GPG_TTY=${GPG_TTY:=/dev/stderr}
+echo "Git code signing -- please touch your YubiKey now..." >"$GPG_TTY"
+exec "gpg" "$@"

@@ -1,0 +1,7 @@
+*.iml
+*.swp
+.DS_Store
+.idea
+.rakeTasks
+.sonar
+sonar-project.properties

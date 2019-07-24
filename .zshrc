@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="jnrowe"
+ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -17,7 +17,7 @@ ZSH_THEME="jnrowe"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -75,7 +75,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export EMAIL=joshk@triplehelix.org
 export DEBEMAIL=$EMAIL
-export PATH="$HOME/bin:$HOME/.fzf/bin:/usr/local/opt/coreutils/libexec/gnubin:$HOME/code/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:$GOPATH/bin:$HOME/src/bin:/usr/local/go/bin:$HOME/platform-tools"
+export GOPATH=$HOME/go
+export PATH="$HOME/bin:$HOME/.tfenv/bin:$HOME/.fzf/bin:/usr/local/opt/coreutils/libexec/gnubin:$HOME/code/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:$GOPATH/bin:$HOME/src/bin:/usr/local/go/bin:$HOME/platform-tools"
 export P4CONFIG=.p4config
 export CVS_RSH=ssh
 export BROWSER=w3m
@@ -86,8 +87,9 @@ export LC_ALL=en_US.UTF-8
 export SAVEHIST=600
 export HISTSIZE=600
 export LIVERAMP_CODE_DIR=$HOME/src
-export GOPATH=$HOME/go
 
 alias ls='ls --color'
 export PS1='$(kube_ps1)%(1j. {%j}.)'"
 "$PS1
+
+alias cs="cd $HOME/go/src/github.com/LiveRamp/customerstorage"

@@ -18,6 +18,8 @@
 [branch]
 	autosetuprebase = always
 [commit]
-  gpgSign = yes
+  gpgSign = true
 [gpg]
   program = git-gpg
+[rebase]
+	instructionFormat = (%an <%ae>) %s.
